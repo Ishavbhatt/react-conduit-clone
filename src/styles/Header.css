@@ -1,0 +1,33 @@
+.nav-items {
+  float: left;
+  display: flex;
+  margin-left: 1rem;
+}
+.navar-nav {
+  float: right;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.conduit-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+.navbar-brand {
+  font-family: titillium web, sans-serif;
+  font-size: 1.5rem !important;
+  padding-top: 0 !important;
+  margin-right: 2rem !important;
+  color: #5cb85c !important;
+}
+.nav-link,
+.icon {
+  color: rgba(0, 0, 0, 0.3);
+}
+.nav-link:hover,
+.icon:hover {
+  color: black;
+  cursor: pointer;
+}

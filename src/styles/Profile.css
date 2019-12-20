@@ -1,0 +1,65 @@
+.user-info {
+  background-color: #f3f3f3;
+  width: 100%;
+  height: auto;
+}
+.smiley-icon {
+  height: 6rem;
+  color: #959595;
+  width: 6rem;
+}
+.smiley-div {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.profile-username {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 20px;
+  font-weight: 500;
+}
+.editprofile-btn {
+  padding: 0.25rem 0.5rem;
+  align-items: center;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+  background-color: transparent;
+  border-color: #ccc;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  color: #999;
+  border: 1px solid #999;
+  margin-left: 50rem;
+}
+.editprofile-div {
+  padding-bottom: 1rem;
+}
+.navbar-myarticles {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.navbar-myarticles {
+  display: flex;
+  margin-left: 10rem;
+}
+.navlink-colored {
+  background: #fff !important;
+  border-bottom: 2px solid #5cb85c !important;
+  color: #5cb85c !important;
+  text-decoration: none;
+}
+.navlink-withoutcolor {
+  color: #959595;
+  text-decoration: none;
+  padding-left: 2rem;
+}
+.navlink-withoutcolor:hover {
+  color: black;
+}
