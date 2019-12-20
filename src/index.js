@@ -17,26 +17,25 @@ import "./styles/main.css";
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      data: []
-    };
+    this.state = {};
   }
+
   render() {
     return (
       <Router>
-        {/* <div>
+        <div>
           <Header />
           <Route path="/" exact component={Home} />
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={Signup} />
-        </div> */}
-        <div>
+        </div>
+        {/* <div>
           <Signinheader />
           <Route path="/" exact component={Signinhome} />
           <Route path="/newpost" component={Newpost} />
           <Route path="/setting" component={Settings} />
           <Route path="/profile" component={Profile} />
-        </div>
+        </div> */}
       </Router>
     );
   }
