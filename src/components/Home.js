@@ -12,15 +12,15 @@ export default class Home extends React.Component {
     };
   }
   componentDidMount() {
-    fetch("https://conduit.productionready.io/api/tags")
-      .then(res => res.json())
-      .then(({ tags }) => this.setState({ tags }));
-    fetch("https://localhost:3001/api/v1/articles")
-      .then(res => res.json())
+    // fetch("http://localhost:3000/api/v1/tags")
+    //   .then(tag => tag.json())
+    //   .then(tag => this.setState({ tag }));
+    fetch("http://localhost:3000/api/v1/articles")
+      .then(articles => articles.json())
       .then(articles => this.setState({ articles }));
   }
   render() {
-    console.log(this.state.articles);
+    console.log(this.state.articles, this.state.tags);
     return (
       <div className="home-page">
         <div className="banner">
@@ -39,31 +39,28 @@ export default class Home extends React.Component {
         <div className="articlesandtags">
           <div className="tagslist">
             <div className="sidebar">
-              {/* <p>Popular Tags</p>
+              <p>Popular Tags</p>
               <div className="taglist-div">
-                <a className="tagname">html</a>
-                <a className="tagname">css</a>
-                <a className="tagname">js</a>
-                <a className="tagname">react</a>
-                <a className="tagname">node</a>
-
-                <a className="tagname">html</a>
-                <a className="tagname">css</a>
-                <a className="tagname">js</a>
-                <a className="tagname">react</a>
-                <a className="tagname">node</a>
-              </div> */}
-              {/* <ul>
-                {this.state.tags.map(tag => (
-                  <li>{tag}</li>
-                ))}
-              </ul> */}
+                <ul>
+                  {this.state.tags.map(tagText => (
+                    <li>
+                      <a className="tagname">{tagText}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
           <div className="articleslist">
             <div>
-              <div className="article-preview"></div>
+              <div className="article-preview">
+                <ul>
+                  {this.state.articles.map(articles => (
+                    <li>{articles}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
