@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/main.css";
 import "../styles/Header.css";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Header(props) {
   return (
@@ -12,19 +12,19 @@ export default function Header(props) {
         <a className="navbar-brand">conduit</a>
         <ul className="navar-nav">
           <li className="nav-items">
-            <Link className="nav-link" to="/">
+            <NavLink activeClassName="selected" className="nav-link" to="/">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-items">
-            <Link className="nav-link" to="/signin">
+            <NavLink activeClassName="active" className="nav-link" to="/signin">
               Sign In
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-items">
-            <Link className="nav-link" to="/signup">
+            <NavLink activeClassName="active" className="nav-link" to="/signup">
               Sign Up
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
