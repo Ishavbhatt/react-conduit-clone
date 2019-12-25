@@ -12,7 +12,7 @@ export default function Header(props) {
         <a className="navbar-brand">conduit</a>
         <ul className="navar-nav">
           <li className="nav-items">
-            <NavLink activeClassName="selected" className="nav-link" to="/">
+            <NavLink activeClassName="active" exact className="nav-link" to="/">
               Home
             </NavLink>
           </li>

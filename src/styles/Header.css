@@ -25,9 +25,14 @@
 .nav-link,
 .icon {
   color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  font-size: 1rem;
 }
 .nav-link:hover,
 .icon:hover {
   color: black;
   cursor: pointer;
+}
+.active {
+  color: rgb(255, 0, 0);
 }

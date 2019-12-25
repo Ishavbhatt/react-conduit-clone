@@ -24,11 +24,15 @@ export default class Index extends React.Component {
     return (
       <Router>
         <div>
+          <Route path="/protected" component={Signinheader} />
+        </div>
+        <div>
           <Header />
           <Route path="/" exact component={Home} />
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={Signup} />
         </div>
+
         {/* <div>
           <Signinheader />
           <Route path="/" exact component={Signinhome} />

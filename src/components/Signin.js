@@ -35,7 +35,7 @@ export default class Signin extends React.Component {
       .then(data => {
         console.log(data);
         localStorage.setItem("token", data.token);
-        this.props.history.push("/");
+        this.props.history.push("/protected");
       });
   };
 
