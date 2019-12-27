@@ -11,7 +11,8 @@ export default class Home extends React.Component {
     this.state = {
       tag: [],
       articles: [],
-      profiles: []
+      profile: [],
+      isLogged: false
     };
   }
   componentDidMount() {
@@ -21,10 +22,19 @@ export default class Home extends React.Component {
     fetch("http://localhost:3000/api/v1/articles")
       .then(articles => articles.json())
       .then(articles => this.setState({ articles }));
-    fetch("http://localhost:3000/api/v1/profiles")
-      .then(profiles => profiles.json())
-      .then(profiles => this.setState({ profiles }));
+    fetch("http://localhost:3000/api/v1/users", {
+      headers: {
+        Authorization: localStorage.token
+      }
+    })
+      .then(profile => profile.json())
+      .then(profile => this.setState({ profile }));
   }
+
+  isLogged = value => {
+    this.setState({ isLogged: value });
+  };
+
   render() {
     console.log(this.state.articles);
     return (

@@ -6,11 +6,12 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default class Signin extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      message: ""
     };
   }
   handleChange = event => {
@@ -31,11 +32,14 @@ export default class Signin extends React.Component {
         password: this.state.password
       })
     })
-      .then(res => res.json())
+      .then(data => data.json())
       .then(data => {
         console.log(data);
-        localStorage.setItem("token", data.token);
-        this.props.history.push("/protected");
+        if (localStorage.token) {
+          this.props.history.push("/protected");
+        } else {
+          this.setState({ message: data.message });
+        }
       });
   };
 

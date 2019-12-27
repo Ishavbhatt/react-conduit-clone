@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles/main.css";
 import "../styles/Header.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { GiBookmarklet } from "react-icons/gi";
 import { IoIosSettings } from "react-icons/io";
@@ -14,26 +14,38 @@ export default function Signinheader(props) {
         <a className="navbar-brand">conduit</a>
         <ul className="navar-nav">
           <li className="nav-items">
-            <Link className="nav-link" to="/">
+            <NavLink activeClassName="active" exact className="nav-link" to="/">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-items">
             <GiBookmarklet className="icon" />
-            <Link className="nav-link" to="/newpost">
+            <NavLink
+              activeClassName="active"
+              className="nav-link"
+              to="/newpost"
+            >
               New Post
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-items">
             <IoIosSettings className="icon" />
-            <Link className="nav-link" to="/setting">
+            <NavLink
+              activeClassName="active"
+              className="nav-link"
+              to="/setting"
+            >
               Setting
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-items">
-            <Link className="nav-link" to="/profile">
+            <NavLink
+              activeClassName="active"
+              className="nav-link"
+              to="/profile"
+            >
               Profile
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

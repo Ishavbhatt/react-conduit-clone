@@ -84,6 +84,9 @@
   padding: 10px;
   cursor: pointer;
 }
+.tagname:hover {
+  background-color: chartreuse;
+}
 /* Article */
 .flex {
   display: flex;
@@ -145,7 +148,7 @@
 }
 
 .article-preview span {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 26px;
   font-weight: 600;
   color: #373a3c;
