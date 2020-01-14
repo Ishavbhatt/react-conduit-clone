@@ -16,13 +16,13 @@ export default class Home extends React.Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3000/api/v1/tags")
+    fetch("http://localhost:4000/api/v1/tags")
       .then(tag => tag.json())
       .then(tag => this.setState({ tag }));
-    fetch("http://localhost:3000/api/v1/articles")
+    fetch("http://localhost:4000/api/v1/articles")
       .then(articles => articles.json())
       .then(articles => this.setState({ articles }));
-    fetch("http://localhost:3000/api/v1/users", {
+    fetch("http://localhost:4000/api/v1/users", {
       headers: {
         Authorization: localStorage.token
       }
@@ -40,6 +40,7 @@ export default class Home extends React.Component {
     return (
       <div className="home-page">
         <Articles
+          users={this.state.users}
           articles={this.state.articles.articlelist}
           tag={this.state.tag.tags}
         />

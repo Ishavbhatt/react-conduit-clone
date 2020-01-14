@@ -37,6 +37,10 @@
   border: 1px solid #999;
   margin-left: 50rem;
 }
+.editprofile-btn:hover {
+  background-color: grey;
+  color: white;
+}
 .editprofile-div {
   padding-bottom: 1rem;
 }

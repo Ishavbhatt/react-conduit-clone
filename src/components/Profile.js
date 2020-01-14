@@ -2,6 +2,7 @@ import React from "react";
 
 import "../styles/main.css";
 import "../styles/Profile.css";
+import { Link } from "react-router-dom";
 
 import { FaSmileBeam } from "react-icons/fa";
 import { IoIosSettings } from "react-icons/io";
@@ -15,10 +16,10 @@ export default function Profile() {
         </div>
         <p className="profile-username">username</p>
         <div className="editprofile-div">
-          <a className="editprofile-btn">
+          <Link to="/setting" className="editprofile-btn">
             <IoIosSettings />
             Edit Profile Setting
-          </a>
+          </Link>
         </div>
       </div>
       <div classNam="myarticles-toggle">

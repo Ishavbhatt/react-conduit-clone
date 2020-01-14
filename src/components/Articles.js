@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 
 import "../styles/main.css";
 import "../styles/Home.css";
@@ -34,11 +34,17 @@ const Article = props => {
                 <div className="flex">
                   <GoSmiley className="user-image" />
                   <div className="nameanddate">
-                    <h3 className="user-name">Tony Varghese</h3>
+                    {/* {props.users &&
+                      props.articles.map(user => (
+                        <h3 className="user-name">{user.name}</h3>
+                      ))} */}
+                    <h3 className="user-name">{props.author.username}</h3>
+
                     <p className="date">{date}</p>
                   </div>
                   <span className="like-box">
                     <GoHeart className="like-button" />
+                    <span>1</span>
                   </span>
                 </div>
                 <div className="article-preview">

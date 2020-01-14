@@ -6,6 +6,7 @@ import "../styles/Home.css";
 export default function Signinhome() {
   return (
     <div className="Signinhome-page">
+      <h1>Sign in home</h1>
       <div className="global-feed">
         <ul className="nav nav-pills">
           <li className="nav-items">
