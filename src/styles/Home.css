@@ -85,7 +85,7 @@
   cursor: pointer;
 }
 .tagname:hover {
-  background-color: chartreuse;
+  background-color: #5cb85c;
 }
 /* Article */
 .flex {

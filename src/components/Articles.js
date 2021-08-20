@@ -38,7 +38,7 @@ const Article = props => {
                       props.articles.map(user => (
                         <h3 className="user-name">{user.name}</h3>
                       ))} */}
-                    <h3 className="user-name">{props.author.username}</h3>
+                    <h3 className="user-name">Name</h3>
 
                     <p className="date">{date}</p>
                   </div>
